@@ -1,6 +1,6 @@
 .container{
-    width: 1010px;
-    height: 645px;
+    width: 990px;
+    height: 635px;
     background-color: silver;
     margin: 0px auto;
     padding: 10px 0px 0px 10px;
@@ -8,7 +8,7 @@
 .top-nav {
     height: 150px;
     background-color: green;
-    margin: 15px 25px 0px 15px;
+    margin: 10px 25px 10px 15px;
     display: block;
 }
 .side-nav {
@@ -21,10 +21,10 @@
 }
 .main {
     height: 430px;
-    width: 740px;
+    width: 725px;
     background-color: red;
     margin: -315px 0px 0px 235px;
-    padding: 10px 0px 0px 10px;
+    padding: 5px 0px 0px 5px;
 
 }
 .sub-content {

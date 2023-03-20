@@ -2,6 +2,10 @@ span {
     display: block;
 }
 
+.container{
+    margin: 0px auto;
+}
+
 #search {
     color: rgb(0, 180, 180);
     background-color: white;
