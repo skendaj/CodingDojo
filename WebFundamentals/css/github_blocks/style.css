@@ -1,4 +1,4 @@
-.container{
+.container {
     background-color: rgb(225, 225, 225);
     width: 620px;
     height: 570px;
@@ -6,57 +6,44 @@
     padding: 5px;
 }
 
-.special_forces{
+.special_forces {
     background-color: rgb(187, 14, 14);
-    display: flex;
     margin: 10px;
-    padding: 10px;
+    display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.characters_sf{
-    width: 150px;
-    height: 150px;
-    margin: 10px;
-}
-
-.daft_punk{
+.daft_punk {
     background-color: rgb(225, 212, 20);
-    display: flex;
     margin: 10px;
+    display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.characters_dp{
-    width: 150px;
-    height: 150px;
-    margin: 10px;
-}
-
-.movies{
+.movies {
     background-color: rgb(8, 151, 163);
-    display: flex;
     margin: 10px;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.characters_m{
+.characters {
     width: 150px;
     height: 150px;
     margin: 10px;
 }
 
-h1{
+h1 {
     text-align: center;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: oblique;
     font-weight: lighter;
 }
 
-#source{
+#source {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
