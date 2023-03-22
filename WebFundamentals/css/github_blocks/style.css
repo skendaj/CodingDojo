@@ -1,47 +1,41 @@
-#container{
+.container{
     background-color: rgb(225, 225, 225);
     width: 620px;
     height: 570px;
     margin: 0px auto;
     padding: 5px;
-    align-items: center;
-    justify-content: center;
 }
 
-#special_forces{
+.special_forces{
     background-color: rgb(187, 14, 14);
     display: flex;
     margin: 10px;
     padding: 10px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .characters_sf{
     width: 150px;
     height: 150px;
-    align-items: center;
-    justify-content: center;
     margin: 10px;
 }
 
-#daft_punk{
+.daft_punk{
     background-color: rgb(225, 212, 20);
     display: flex;
     margin: 10px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .characters_dp{
     width: 150px;
     height: 150px;
-    align-items: center;
-    justify-content: center;
     margin: 10px;
 }
 
-#movies{
+.movies{
     background-color: rgb(8, 151, 163);
     display: flex;
     margin: 10px;
@@ -52,8 +46,6 @@
 .characters_m{
     width: 150px;
     height: 150px;
-    align-items: center;
-    justify-content: center;
     margin: 10px;
 }
 
