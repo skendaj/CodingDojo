@@ -1,0 +1,165 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container {
+    border: 2px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/* navbar start */
+.nav-bar {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+
+.nav-elements {
+    width: 50%;
+    margin-left: 3.5%;
+    font-size: 16px;
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn {
+    width: 100px;
+    height: 35px;
+    font-size: 18px;
+    background-color: rgb(23, 162, 184);
+    color: white;
+    border: none;
+    box-shadow: 5px 5px black;
+    margin-right: 8%;
+}
+/* navbar end */
+
+.container-left {
+    flex: 1;
+    border: 2px solid black;
+    width: 30%;
+    /* width: 50%; */
+    justify-content: flex-start;
+}
+/* usercard start */
+.user-card {
+    width: 450px;
+    margin-left: 6%;
+    box-shadow: 0px 2px 2px 3px lightgray;
+    display: flex;
+    flex-direction: column;
+}
+
+.cover {
+    flex: 1;
+    background-color: #17a2b8;
+}
+
+.details {
+    flex: 3;
+    margin-bottom: 3%;
+}
+
+.profilepicture {
+    width: 125px;
+    border: 4px solid lightgray;
+    border-radius: 100%;
+    translate: 0 50%;
+    margin: 0% 3%;
+}
+
+.name {
+    margin: 13% 0% 0% 3%;
+}
+
+.logonamecontainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 2% 0% 0% 3%;
+    font-size: 20px;
+}
+
+.logo {
+    height: 20px;
+    width: 15px;
+    margin-right: 2%;
+}
+
+.description {
+    margin: 3%;
+    font-size: 20px;
+}
+
+span {
+    display: block;
+}
+/* usercard end */
+
+/* education start */
+
+.education {
+    width: 450px;
+    margin: 3% 6%;
+    padding: 3;
+    box-shadow: 0px 2px 2px 3px lightgray;
+    flex-direction: column;
+    align-items: start;
+}
+/* education end */
+
+.container-right {
+    flex: 1;
+    width: 30%;
+    justify-content: flex-end;
+}
+.connection-requests {
+    border: 2px solid black;
+        width: 450px;
+        margin-left: 6%;
+        box-shadow: 0px 2px 2px 3px lightgray;
+        display: flex;
+        flex-direction: column;
+    
+}
+
+.your-connections {
+    border: 2px solid black;
+        width: 450px;
+        margin-left: 6%;
+        box-shadow: 0px 2px 2px 3px lightgray;
+        display: flex;
+        flex-direction: column;
+}
+
+.divtitle {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+.title {
+    margin: 3%;
+}
+
+.education-details {
+    margin: 0% 0% 3% 3%;
+    font-size: 15px;
+}
