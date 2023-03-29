@@ -9,7 +9,7 @@
 }
 
 .nav {
-    background-color:#cccccc;
+    background-color: #cccccc;
     width: 100%;
     height: 50px;
     margin: 0 0 2% 0;
@@ -61,7 +61,8 @@ p {
     margin-left: 25px;
 }
 
-span, h2 {
+span,
+h2 {
     font-style: italic;
 }
 
@@ -95,7 +96,7 @@ button {
 .btn-style {
     box-shadow: 4px 4px 1px black;
     padding: 5%;
-    width:100px;
+    width: 100px;
     font-weight: bold;
 }
 
