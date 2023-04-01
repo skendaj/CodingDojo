@@ -1,23 +1,21 @@
-// exercise 1 changes
+console.log("page loaded...");
+
 function changeName() { 
-    document.getElementById("name").innerHTML = "Bruno Skendaj";
+        document.getElementById("name").innerHTML = "Bruno Skendaj";
 }
 
-function actionsOfRequests() {
-// exercise 2
-    document.getElementById("request");
-    request.remove();
-// exercise 3 Bonus
-    var num=2;
-    num--;
-    var DecreaseNum = document.getElementById("crNumber");
-    console.log(num)
-    document.getElementById("crNumber").innerHTML = num;
-// exercise 4 Bonus
-    var num1=500;
-    num1++;
-    var IncreaseNum = document.getElementById("plusConnectionNum");
-    console.log(num1)
-    document.getElementById("plusConnectionNum").innerHTML = num1;
+function cancelRequests(id){
+    var element = document.querySelector(id);
+    element.remove();
+    var nrRequestElement = document.querySelector("#crNumber");
+    nrRequestElement.innerHTML--;
+}
 
+function acceptRequests(id) {
+    var element = document.querySelector(id);
+    element.remove();
+    var nrRequestElement = document.querySelector("#crNumber");
+    nrRequestElement.innerHTML--;
+    var nrFriendsElement = document.querySelector("#plusConnectionNum");  
+    nrFriendsElement.innerHTML++;
 }

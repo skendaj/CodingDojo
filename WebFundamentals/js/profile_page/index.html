@@ -67,24 +67,24 @@
                     <h3>Connection Requests</h3>
                 </div>
                 <ul class="card-list">
-                    <li id="request" class="card-list-item">
+                    <li id="request1" class="card-list-item">
                         <span>
                             <img src="images/todd-s.jpg" alt="todd" class="avatar-s">
                             Todd E
                         </span>
                         <span>
-                            <img onclick="actionsOfRequests()" src="icons/accept-circle.png" alt="accept" class="icon">
-                            <img onclick="actionsOfRequests()" src="icons/close-circle.png" alt="close" class="icon">
+                            <img onclick='acceptRequests("#request1")' src="icons/accept-circle.png" alt="accept" class="icon">
+                            <img onclick='cancelRequests("#request1")' src="icons/close-circle.png" alt="close" class="icon">
                         </span>
                     </li>
-                    <li class="card-list-item">
+                    <li id="request2" class="card-list-item">
                         <span>
                             <img src="images/phil-s.jpg" alt="phil" class="avatar-s">
                             Phil E
                         </span>
                         <span>
-                            <img src="icons/accept-circle.png" alt="accept" class="icon">
-                            <img src="icons/close-circle.png" alt="close" class="icon">
+                            <img onclick='acceptRequests("#request2")'  src="icons/accept-circle.png" alt="accept" class="icon">
+                            <img onclick='cancelRequests("#request2")' src="icons/close-circle.png" alt="close" class="icon">
                         </span>
                     </li>
                 </ul>
