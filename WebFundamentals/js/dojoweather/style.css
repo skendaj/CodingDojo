@@ -55,12 +55,13 @@ nav{
 }
 
 .cookies{
-    width: 90%;
+    width: 60%;
     padding: 20px;
-    margin-left: 40px;
     align-items: center;
     border: 2px black solid;
     background-color: #EEEEEE;
+    position: fixed;
+    margin: 0 0 0 4%;;
 }
 
 .cookies div{
