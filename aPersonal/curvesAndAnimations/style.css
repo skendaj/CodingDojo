@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    background-color: #202731;
+    /* overflow: hidden; */
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20vw;
+    min-height: 400px;
+}
+
+.red {
+    background-color: red
+}
+
+.orange {
+    background-color: orangered
+}
+
+.yellow {
+    background-color: orange
+}
+
+.green {
+    background-color: green
+}
+
+.blue {
+    background-color: aquamarine
+}
+
+.violetblue {
+    background-color: violet
+}
+
+.purple {
+    background-color: purple
+}
+
+.anotherblue {
+    background-color: aqua
+}
+
+.curve {
+    position: absolute;
+    height: 255px;
+    width: 100%;
+    bottom: 0;
+}
+
+.redwave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.orangewave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.orangewave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 99px;
+    transform: rotateY(180deg);
+}
+
+.orangewave {
+    fill: #000000;
+}
+
+.yellowwave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.yellowwave svg {
+    position: relative;
+    display: block;
+    width: calc(140% + 1.3px);
+    height: 217px;
+    transform: rotateY(180deg);
+}
+
+.yellowwave .shape-fill {
+    fill: #000000;
+}
+
+.greenwave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.greenwave svg {
+    position: relative;
+    display: block;
+    width: calc(113% + 1.3px);
+    height: 118px;
+}
+
+.greenwave .shape-fill {
+    fill: #000000;
+}
+
+.bluewave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.bluewave svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 118px;
+}
+
+.bluewave .shape-fill {
+    fill: #000000;
+}
+
+.violetbluewave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.violetbluewave svg {
+    position: relative;
+    display: block;
+    width: calc(110% + 1.3px);
+    height: 98px;
+}
+
+.violetbluewave .shape-fill {
+    fill: #000000;
+}
+
+.purplewave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.purplewave svg {
+    position: relative;
+    display: block;
+    width: calc(127% + 1.3px);
+    height: 87px;
+    transform: rotateY(180deg);
+}
+
+.purplewave .shape-fill {
+    fill: #000000;
+}
