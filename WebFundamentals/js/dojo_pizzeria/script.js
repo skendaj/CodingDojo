@@ -17,5 +17,4 @@ var napoletana = pizzaOven ("napoletana", "traditional", "mozzarella di bufala",
 // bonus
 var pizzas = [sausageChicago, capricciosa, diavola, napoletana];
 var randomPizza = pizzas[Math.floor(Math.random() * pizzas.length)];
-
 console.log(randomPizza);
