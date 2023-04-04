@@ -23,4 +23,3 @@ function changeGrads(...ids) {
     result[id].textContent = grads[id] + "°"
     }
 }
-    
