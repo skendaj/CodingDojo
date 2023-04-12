@@ -34,5 +34,17 @@ const fireType = pokemon.filter(pokemon => pokemon.types.includes("fire"));
 const moreThanOneType = pokemon.filter(pokemon => pokemon.types.length > 1);
 
 // an array with just the names of the pokémon
-const pokemonNames = pokemon.filter(pokemon => pokemon.name);
-console.log(pokemonNames);
+const pokemonNamesArray = pokemon.map(pokemon => pokemon.name);
+
+// an array with just the names of pokémon with an id greater than 99
+const pokemonNamesIdg99 = pokemon.filter(pokemon => pokemon.id > 99).map(pokemon => pokemon.name);
+
+
+// an array with just the names of the pokémon whose only type is poison
+const onlyTypePoison = pokemon.filter(pokemon => pokemon.types.includes("poison")).filter(pokemon => pokemon.types.length === 1).map(pokemon => pokemon.name);
+
+// an array containing just the first type of all the pokémon whose second type is "flying"
+const secondTypeFlying = pokemon.filter(pokemon => pokemon.types[1]==="flying").map(pokemon => pokemon.types);
+
+// a count of the number of pokémon that are "normal" type
+const countNormalType = pokemon.filter(pokemon => pokemon.types.includes("normal")).map(pokemon => pokemon.types).length;
