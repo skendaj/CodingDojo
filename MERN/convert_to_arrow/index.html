@@ -27,7 +27,7 @@
     </p>
     <p id="set-color" onclick="setBackgroundColorById('set-color', document.getElementById('color-input').value)">
         We can click anywhere in this paragraph tag and it will change the background color to whatever is in this
-        input: <input type="text" id="color-input"/>
+        input: <input type="text" id="color-input" />
     </p>
     <p onmouseover="mouseOverFunction(this)">
         Moving your mouse over this text will make it black, so you cannot read it!
@@ -41,10 +41,12 @@
             el.style = "background-color: black";
         };
 
+
         document.getElementById("button").onclick = () => setBackgroundColorById("paragraph", "blue");
         document.getElementById("alert").onclick = () => alert(getValueFromId("popup-input"));
         document.getElementById("hover-this").onmouseover = () => setBackgroundColorById("body", "red");
         document.getElementById("hover-this").onmouseout = () => setBackgroundColorById("body", "white");
+        document.getElementById("set-color").addEventListener("click", () => {setBackgroundColorById("set-color", colorInput.value);}); 
     </script>
 </body>
 
