@@ -39,7 +39,6 @@ const pokemonNamesArray = pokemon.map(pokemon => pokemon.name);
 // an array with just the names of pokémon with an id greater than 99
 const pokemonNamesIdg99 = pokemon.filter(pokemon => pokemon.id > 99).map(pokemon => pokemon.name);
 
-
 // an array with just the names of the pokémon whose only type is poison
 const onlyTypePoison = pokemon.filter(pokemon => pokemon.types.includes("poison")).filter(pokemon => pokemon.types.length === 1).map(pokemon => pokemon.name);
 
