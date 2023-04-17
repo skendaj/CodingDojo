@@ -49,30 +49,30 @@ console.log("Welcome", newUser);
     <div className="container mt-5">
       <form onSubmit={handleSubmit(createUser)}>
         <h2>Hook Form</h2>
-      <div className="form-group">
-            <label>Fist Name: </label>
+      <div className="form-group mb-3">
+            <label className="mb-1">Fist Name: </label>
             <input 
             type="text" 
             className="form-control"
             onChange={ (e) => setFirstName(e.target.value)} 
             />
         </div>
-        <div className="form-group">
-            <label>Last Name: </label>
+        <div className="form-group mb-3">
+            <label className="mb-1">Last Name: </label>
             <input 
             type="text" 
             className="form-control"
             onChange={ (e)=> setLastName(e.target.value)} />
         </div>
-        <div className="form-group">
-            <label>Email: </label>
+        <div className="form-group mb-3">
+            <label className="mb-1">Email: </label>
             <input 
             type="text" 
             className="form-control"
             onChange={ (e)=> setEmail(e.target.value)} />
         </div>
-        <div className="form-group">
-          <label>Password</label>
+        <div className="form-group mb-3">
+          <label className="mb-1">Password</label>
           <input
             name="password"
             type="password"
@@ -83,7 +83,7 @@ console.log("Welcome", newUser);
           <div className="invalid-feedback">{errors.password?.message}</div>
         </div>
         <div className="form-group">
-          <label>Confirm Password</label>
+          <label className="mb-1">Confirm Password</label>
           <input
             name="confirmPassword"
             type="password"
