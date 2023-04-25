@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
-
+import React, {useState} from "react";
+import PetCard from "./Pet";
 const PersonCard = (props) => {
-    const [ personAge, setPersonAge ] = useState(props.initialAge);
+    const {lastName, firstName, personAge, hairColor,kafshet} = props
+    const [age, setAge] = useState(personAge)
+    
+    return ( 
+        <>
+    <h2>Name: {lastName} {firstName}</h2>
+    <p>Age : {age}</p>
+    <p>Hair color : {hairColor}</p>
+    <button onClick={(event) => setAge(age + 1)}>Birthday Button for {firstName}</button>
+    {kafshet? kafshet.map((e,index)=> <PetCard key={index} firstName = {e.firstName} lastName = {e.lastName}  />) : "" }
 
-    return (
-        <div>
-            <h1>{ props.lastName }, { props.firstName }</h1>
-            <p>Age: { personAge }</p>
-            <p>Hair Color: { props.hairColor }</p>
-            <button onClick={ (event) => setPersonAge(personAge + 1)}>
-                Birthday Button for { props.firstName } { props.lastName }</button>
-        </div>
+    
+    </>
     )
 }
 
