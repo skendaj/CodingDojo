@@ -5,20 +5,20 @@ function App() {
   
   const kafshet= [{
     firstName : "Lesi" ,
-    lastName : "qen"
+    lastName : "Qen"
   },
   {
     firstName : "Kitty" ,
-    lastName : "mace"
+    lastName : "Mace"
   }
 ] 
 const kafshet1 = [{
-  firstName : "lesi" ,
-  lastName : "qen"
+  firstName : "Lesi" ,
+  lastName : "Qen"
 },
 {
-  firstName : "kitty" ,
-  lastName : "mace"
+  firstName : "Kitty" ,
+  lastName : "Mace"
 }
 ] 
 
