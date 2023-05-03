@@ -1,23 +1,45 @@
-import React, { useState } from 'react';
-import MessageForm from './components/MessageForm';
-import MessageDisplay from './components/MessageForm';
-    
-// imports removed for brevity
-function App() {
-  const [currentMsg, setCurrentMsg] = useState("There are no messages");
-  
-  const youveGotMail = ( newMessage ) => {
-      setCurrentMsg( newMessage );
-  }
-  
+import { useState } from 'react';
+import { foods, filterItems } from './components/Data';
+
+export default function FilterableList() {
   return (
-      <>
-          <MessageForm onNewMessage={ youveGotMail } />
-          <MessageDisplay message={ currentMsg } />
-      </>
+    <>
+      <SearchBar />
+      <hr />
+      <List items={foods} />
+    </>
   );
 }
-  
 
-    
-export default App;
+function SearchBar() {
+  const [query, setQuery] = useState('');
+
+  function handleChange(e) {
+    setQuery(e.target.value);
+  }
+
+  return (
+    <label>
+      Search:{' '}
+      <input
+        value={query}
+        onChange={handleChange}
+      />
+    </label>
+  );
+}
+
+function List({ items }) {
+  return (
+    <table>
+      <tbody>
+        {items.map(food => (
+          <tr key={food.id}>
+            <td>{food.name}</td>
+            <td>{food.description}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
