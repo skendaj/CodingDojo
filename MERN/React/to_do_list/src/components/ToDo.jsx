@@ -4,7 +4,7 @@ const ToDo =(props) =>{
     const {toDoList, setToDoList}=props
     
     const handleSelect = (e) => {
-        toDoList[e.target.id].selected=true;
+        toDoList[e.target.id].selected= !toDoList[e.target.id].selected;
         setToDoList([...toDoList])
     }
 
@@ -18,7 +18,6 @@ const ToDo =(props) =>{
             {toDoList.map((item, index)=>
             (<div>
                 <p style={{textDecoration: item.selected? 'line-through' : ""}}>{item.text}</p>
-                <p>{index}</p>
                 <input className="form-check-input" type="checkbox" id={index} onChange={handleSelect}/>
             <input className="btn btn-primary" type="submit" id={index} onClick={()=>onDelete(index)} value ="Delete"/>
             </div>))
