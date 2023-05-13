@@ -22,16 +22,16 @@ const Search  =({setResults})=>{
 return(
     <>
      <p>Search for:</p>
-    <select class="form-select" onChange={(e) => handleSelect(e)} aria-label="Default select example">
+    <select class="form-select" onChange={(e) => handleSelect(e)}>
      <option value="people">People</option>
      <option value="planets">Planets</option>
    </select>
    
    <p>ID:</p>
    <div class="input-group mb-3">
-     <input type="text" class="form-control"  value={input} aria-label="Recipient's username" aria-describedby="basic-addon2" onInput={(e) =>setInput(e.target.value)}/>
+     <input type="text" class="form-control"  value={input} onInput={(e) =>setInput(e.target.value)}/>
      <div class="input-group-append">
-     <button class="btn btn-outline-secondary" type="button" onClick={handleSearch}>Search</button>
+     <button class="btn btn-primary" type="button" onClick={handleSearch}>Search</button>
  </div>
  </div>
     </>

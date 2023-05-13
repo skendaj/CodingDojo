@@ -1,45 +1,33 @@
-import { useState } from 'react';
-import { foods, filterItems } from './components/Data';
-
-export default function FilterableList() {
+import React, { useState } from "react";
+import { useNavigate} from "react-router-dom";
+    
+const Location = (props) => {
   return (
-    <>
-      <SearchBar />
-      <hr />
-      <List items={foods} />
-    </>
+    <h1>Location Component Loaded!</h1>
   );
 }
-
-function SearchBar() {
-  const [query, setQuery] = useState('');
-
-  function handleChange(e) {
-    setQuery(e.target.value);
-  }
-
+    
+function App() {
+  const Survey = (props) => {
+    const [name, setName] = useState("");
+    const [comment, setComment] = useState("");
+    
+    const sendSurvey = (e) => {
+      e.preventDefault();
+      // do something with the data
+      navigate("/results");
+    }
+      
   return (
-    <label>
-      Search:{' '}
-      <input
-        value={query}
-        onChange={handleChange}
-      />
-    </label>
+    <form onSubmit={ sendSurvey }>
+      <label>Your Name:</label>
+      <input type="text" onChange={ (e) => setName(e.target.value) } value={ name } />
+      <label>Your Comment:</label>
+      <textarea onChange={ (e) => setComment(e.target.value) } value={ comment }></textarea>
+      <input type="submit" value="Submit Survey" />
+    </form>
   );
 }
-
-function List({ items }) {
-  return (
-    <table>
-      <tbody>
-        {items.map(food => (
-          <tr key={food.id}>
-            <td>{food.name}</td>
-            <td>{food.description}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
 }
+    
+export default App;

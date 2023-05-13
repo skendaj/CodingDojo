@@ -50,10 +50,10 @@ const Display = () => {
         <div>
           <h2>{character.characterName}</h2>
           <ul>
-            <li>Height:{character.height}</li>
-            <li>Hair Color:{character.hairColor}</li>
-            <li>Eye Color:{character.eyeColor}</li>
-            <li>Skin Color:{character.skinColor}</li>
+            <li>Height: {character.height}</li>
+            <li>Hair Color: {character.hairColor}</li>
+            <li>Eye Color: {character.eyeColor}</li>
+            <li>Skin Color: {character.skinColor}</li>
             <li><a href={homeworld.homeworldUrl}>HomeWorld:{homeworld.homeworldName}</a></li>
           </ul>
         </div>
@@ -63,10 +63,10 @@ const Display = () => {
         <div>
           <h2>{planet.planetName}</h2>
           <ul>
-            <li>Climate:{planet.climate}</li>
-            <li>Terrain:{planet.terrain}</li>
-            <li>Surface Water:{planet.surfaceWater}</li>
-            <li>Population:{planet.population}</li>
+            <li>Climate: {planet.climate}</li>
+            <li>Terrain: {planet.terrain}</li>
+            <li>Surface Water: {planet.surfaceWater}</li>
+            <li>Population: {planet.population}</li>
           </ul>
       </div>
       )
