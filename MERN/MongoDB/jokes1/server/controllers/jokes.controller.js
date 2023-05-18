@@ -1,7 +1,7 @@
-const Jokes = require('../models/jokes.model');
+const Joke = require('../models/jokes.model');
 
 module.exports.findAllJokes = (req, res) => {
-    Jokes.find() 
+    Joke.find() 
          .then((allDaJokes) =>{
             res.json({jokes: allDaJokes })
          })
@@ -11,7 +11,7 @@ module.exports.findAllJokes = (req, res) => {
 }
 
 module.exports.findOneSingleJoke =(req, res) => {
-    Jokes.findOne({_id: req.params.id })
+    Joke.findOne({_id: req.params.id })
          .then(oneSingleJoke => {
             res.json({jokes: oneSingleJoke})
          })
@@ -21,7 +21,7 @@ module.exports.findOneSingleJoke =(req, res) => {
 }
 
 module.exports.createNewJoke = (req, res) => {
-    Jokes.create(req.body)
+    Joke.create(req.body)
         .then(newlyCreatedJoke => {
             res.json({ jokes: newlyCreatedJoke })
         })
@@ -31,7 +31,7 @@ module.exports.createNewJoke = (req, res) => {
     }
 
     module.exports.updateExistingJoke = (req, res) => {
-        Jokes.findOneAndUpdate(
+        Joke.findOneAndUpdate(
             {_id: req.params.id },
             req.body,
             {new: true, runValidators: true }
@@ -45,7 +45,7 @@ module.exports.createNewJoke = (req, res) => {
     }
 
     module.exports.deleteAnExistingJoke = (req, res) =>{
-        Jokes.deleteOne({_id: req.params.id })
+        Joke.deleteOne({_id: req.params.id })
              .then(result => {
                 res.json({result: result})
              })
