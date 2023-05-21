@@ -1,13 +1,20 @@
-import './App.css';
-import React from 'react';
-import ProductManager from './components/ProductManager';
+import React, { useState } from 'react';
+import axios from 'axios';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Main from "./views/Main"
+// import ProductManager from './components/ProductManager';
 
-function App() {
-  return (
-    <div className="App">
-      <ProductManager />
-    </div>
-  );
+const App = () => {
+    
+    return(
+	<div>
+    	<BrowserRouter>
+            <Routes>
+	    <Route element={<Main />} path="/home" default/> 
+            </Routes>
+    	</BrowserRouter>
+        </div>
+    ) 
 }
-
 export default App;
+
