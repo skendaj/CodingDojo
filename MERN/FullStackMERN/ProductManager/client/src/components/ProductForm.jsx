@@ -24,6 +24,7 @@ const ProductManager = () => {
     
     return (
       <div className="d-flex flex-column justify-content-center">
+        <h1>Product Manager</h1>
         <form className=" "  onSubmit={onSubmitHandler}>
               <div className="form-group col-sm-4 align-items-center">
                 <label>Title: </label>
