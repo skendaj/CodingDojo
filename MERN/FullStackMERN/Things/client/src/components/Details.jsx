@@ -17,15 +17,15 @@ const Details =() => {
             .catch( err => console.log(err) );
     }, [id]);
 
-    // const handleLikes = () => {
-    //     axios
-    //       .post('http://localhost:8000/api/things/' + id)
-    //       .then((res) => {
-    //         setThing({ ...thing,  likes: thing.likes + 1 });
-    //         navigate("/" );
-    //       })
-    //       .catch((err) => console.log(err));
-    //   };
+    const handleLikes = () => {
+        axios
+          .post('http://localhost:8000/api/things/' + id)
+          .then((res) => {
+            setThing({ ...thing,  likes: thing.likes + 1 });
+            navigate("/" );
+          })
+          .catch((err) => console.log(err));
+      };
 
     const deleteThing = (thingId) => {
         axios.delete('http://localhost:8000/api/things/' + thingId)
@@ -39,14 +39,14 @@ const Details =() => {
     }
 
     
-    // const resetLikes = () => {
-    //     axios
-    //       .put('http://localhost:8000/api/things/' + id)
-    //       .then((res) => {
-    //         setThing({ ...thing,  likes:0 });
-    //       })
-    //       .catch((err) => console.log(err));
-    //   };
+    const resetLikes = () => {
+        axios
+          .put('http://localhost:8000/api/things/' + id)
+          .then((res) => {
+            setThing({ ...thing,  likes:0 });
+          })
+          .catch((err) => console.log(err));
+      };
 
  return (
    <div>
@@ -59,13 +59,12 @@ const Details =() => {
      <h2>{thing.name}</h2>
      <p>Likes: {thing.likes}</p>
      <div className="buttons">
-        <button >Like</button>
-        {/* onClick={handleLikes} */}
-       <button onClick={(e)=>{deleteThing(thing._id)}}>Delete This Thing</button>
-       <button>Reset Likes</button>
-       {/* onClick={resetLikes} */}
-       <button>
-         <Link to={`/things/edit/${thing._id}`}>Change Name</Link>
+        <button  onClick={handleLikes} class="btn btn-primary mr-2" >Like</button>
+       
+       <button class="btn btn-primary" onClick={(e)=>{deleteThing(thing._id)}}>Delete This Thing</button>
+       <button onClick={resetLikes} class="btn btn-primary">Reset Likes</button>
+       <button class="btn btn-outline-info">
+         <Link style={{textDecoration: 'none'}} to={`/things/edit/${thing._id}`}>Change Name</Link>
          {/* <Link to={"/api/things/edit/"+ thing._id}>Change Name</Link> */}
        </button>
      </div>

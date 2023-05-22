@@ -40,10 +40,9 @@ const ThingsTable= (props) => {
     return (
       <div>
         <p>Like these things!</p>
-        <table class="table">
+        <table class="table table-bordered">
           <thead>
             <tr>
-              <th scope="col">#</th>
               <th scope="col">Things</th>
               <th scope="col">Likes</th>
               <th scope="col">Actions</th>
@@ -53,10 +52,9 @@ const ThingsTable= (props) => {
           {thing.map((thing, index) => {
             return (
               <tr key={index}>
-                <th scope="row">{index + 1}</th>
-                <td><Link to={`/thing/${thing._id}`}><p>{thing.name}</p></Link></td>
+                <td><p>{thing.name}</p></td>
                 <td>{thing.likes}</td>
-                <td><button onClick={() => handleLikes(thing._id)}>Like</button><button><Link to={`/thing/edit/${thing._id}`}>Edit</Link></button></td>
+                <td><button class="btn btn-outline-success" onClick={() => handleLikes(thing._id)}>Like</button><button class="btn btn-outline-info"><Link to={`/things/${thing._id}`}>Edit</Link></button></td>
               </tr>
             );
           })}

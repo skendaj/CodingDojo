@@ -45,7 +45,7 @@ const UpdateThing = (props) => {
                         value={name}
                         onChange={(e) => { setName(e.target.value) }} />
                 </p>
-                <input type="submit" />
+                <input class="btn btn-outline-success" type="submit" />
             </form>
         </div>
     )
