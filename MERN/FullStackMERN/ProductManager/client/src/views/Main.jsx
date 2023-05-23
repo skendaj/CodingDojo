@@ -1,17 +1,19 @@
 import React, { useState } from 'react'
-import axios from 'axios';
 import ProductForm from '../components/ProductForm';
 import ProductList from '../components/ProductList';
 
 const Main = (props) => {
-    
-    const [products, setProducts] = useState([]);
+    const [product, setProduct] = useState([]);
+
+    const removeFromDom = productId => {
+        setProduct(product.filter(product => product._id != productId)); 
+    }
     
     return (
         <div>
-            <ProductForm products={products} setProduct={setProducts} />
+           <ProductForm product={product} setProduct={setProduct} />
             <hr/>
-            <ProductList products={products} setProducts={setProducts} />
+           <ProductList product={product}  setProduct={setProduct}  removeFromDom={removeFromDom}/>
         </div>
     )
 }

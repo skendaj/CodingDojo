@@ -1,48 +1,52 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-const ProductManager = () => {
-    //keep track of what is being typed via useState hook
-    const [title, setTitle] = useState(""); 
-    const [price, setPrice] = useState("");
+
+const ProductForm= (props) => {
+    const {product, setProduct} = props;
+    const [title, setTitle] = useState("");
+    const [price, setPrice] = useState();
     const [description, setDescription] = useState("");
-    //handler when the form is submitted
+
+
     const onSubmitHandler = (e) => {
-        //prevent default behavior of the submit
         e.preventDefault();
-        //make a post request to create a new person
         axios.post('http://localhost:8000/api/product', {
-            title,    // this is shortcut syntax for firstName: firstName,
-            price,
-            description      // this is shortcut syntax for lastName: lastName
+            title,
+            price,    
+            description      
         })
             .then(res=>{
-                console.log(res); // always console log to get used to tracking your data!
-                console.log(res.data);
-            })
+                console.log(res); 
+                console.log(res.data);
+                setProduct([...product, res.data]);
+            })
             .catch(err=>console.log(err))
+            setTitle("");
+            setPrice("");
+            setDescription("");
     }
-    
+
     return (
-      <div className="d-flex flex-column justify-content-center">
-        <h1>Product Manager</h1>
-        <form className=" "  onSubmit={onSubmitHandler}>
-              <div className="form-group col-sm-4 align-items-center">
-                <label>Title: </label>
-                <input type="text" className="form-control"  placeholder="Enter title" onChange = {(e)=>setTitle(e.target.value)} />
+        <div>
+            <h2>Product Manager</h2>
+            <form onSubmit={onSubmitHandler}>
+                <div class="form-group">
+                <label>Title:</label>
+                <input type="text" class="form-control mt-1" value={title} onChange = {(e)=>setTitle(e.target.value)}/>
                 </div>
-                <div className="form-group col-sm-4">
+                <div class="form-group">
                 <label>Price:</label>
-                <input type="number" className="form-control"  placeholder="Enter price" onChange = {(e)=>setPrice(e.target.value)} />      
-                </div>          
-                <div className="form-group col-sm-4">
+                <input type="text" class="form-control mt-1" value={price} onChange = {(e)=>setPrice(e.target.value)}/>
+                </div>
+                <div class="form-group">
                 <label>Description:</label>
-                <input type="text" className="form-control"  placeholder="Enter description" onChange = {(e)=>setDescription(e.target.value)} /> 
+                <input type="text" class="form-control mt-1" value={description} onChange = {(e)=>setDescription(e.target.value)}/>
                 </div>
-                <div className="form-group col-sm-1 justify-content-md-center">
-                <button type="submit" className="btn btn-primary">Submit</button>
-                </div>
-        </form>
+            <button type="submit" class="btn btn-primary mt-3" >Create</button>
+            </form>
         </div>
     )
+
 }
-export default ProductManager;
+export default ProductForm;
+

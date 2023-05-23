@@ -1,46 +1,51 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios';
+import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-const ProductList = (props) => {
-    /* We deconstruct getter and setter which were passed down 
-    via props by the parent component (app.js) to our child 
-    component (PersonList.js). Now we can easily use the getter 
-    and setter without having to write props.getter or props.setter every time: */
-    const { products, setProducts } = props;
+import axios from 'axios';
 
-    useEffect(() => {
-        axios.get("http://localhost:8000/api/products")
-            .then((res) => {
-                console.log(res.data);
-                setProducts(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
+const ProductList = (props) => {
+    const {removeFromDom, product, setProduct} = props;
+    
+    useEffect(()=>{
+    	axios.get("http://localhost:8000/api/product")
+    	.then((res)=>{
+            setProduct(res.data.products);
+	})
+    	.catch((err)=>{
+            console.log(err);
+    	})
     }, [])
 
+    const deleteProduct = (productId) => {
+        axios.delete('http://localhost:8000/api/product/' + productId)
+            .then(res => {
+                removeFromDom(productId)
+            })
+            .catch(err => console.log(err))
+    }
+    
     return (
-        // <div>
-        //     {
-        //         products.length > 0 && products.map((product, index) => {
-        //             return (
-        //             <p key={index}>{product.title}, {product.price}</p>
-        //             )
-        //         })
-        //     }
-        // </div>
         <div>
-            <h2>All Products:</h2>
+             <table class="table col-sm-6">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                  </tr>
+                </thead>
+                <tbody>
             {
-                products.map((product, index)=>{
-                return (
-                    <div key={index}>
-                        <Link to={`/products/${product._id}`}> {product.title}'s Page! </Link>
-                    </div> 
-                )})
-        }
+                product.map((product, index)=>{
+                return <tr>
+                    <th scope="row">{index +1}</th>
+                    <td><Link to={`/product/${product._id}`}><p key={index}>{product.title}</p></Link></td>
+                    <Link to={"/product/edit/" + product._id} className="btn btn-info">Edit</Link>
+                    <button onClick={(e)=>{deleteProduct(product._id)}} className="btn btn-dark">Delete</button>
+                    </tr>
+                })
+            }
+            </tbody>
+            </table>
         </div>
     )
 }
 export default ProductList;
-
