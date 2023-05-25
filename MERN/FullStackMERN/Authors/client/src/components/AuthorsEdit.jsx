@@ -52,7 +52,6 @@ const AuthorsEdit = (props) => {
                 <input class="btn btn-outline-success" type="submit" />
             </form>
             {error && <span className="text-danger">{error}</span>}
-
         </div>
     )
 
