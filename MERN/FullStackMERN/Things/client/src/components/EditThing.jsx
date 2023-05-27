@@ -7,6 +7,7 @@ const UpdateThing = (props) => {
     const { id } = useParams();
     const [name, setName] = useState("");
     const [likes, setLikes] = useState();
+    const [error, setError] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -20,6 +21,10 @@ const UpdateThing = (props) => {
 
     const updateThing = (e) => {
         e.preventDefault();
+        if (name.length <= 3) {
+            setError('Name should be more than 3 characters!');
+            return;
+          }
         axios.patch('http://localhost:8000/api/things/edit/' + id, {
             name,
         })
@@ -47,6 +52,8 @@ const UpdateThing = (props) => {
                 </p>
                 <input class="btn btn-outline-success" type="submit" />
             </form>
+            {error && <span className="text-danger">{error}</span>}
+
         </div>
     )
 

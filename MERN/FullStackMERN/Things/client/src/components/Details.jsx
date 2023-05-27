@@ -65,7 +65,6 @@ const Details =() => {
        <button onClick={resetLikes} class="btn btn-primary">Reset Likes</button>
        <button class="btn btn-outline-info">
          <Link style={{textDecoration: 'none'}} to={`/things/edit/${thing._id}`}>Change Name</Link>
-         {/* <Link to={"/api/things/edit/"+ thing._id}>Change Name</Link> */}
        </button>
      </div>
    </div>
