@@ -1,0 +1,44 @@
+Crypto Price Checker App
+API
+Socket.io
+Metamask integration
+
+!!!!!!!!!!!
+ RREGULLO ROUTES NE APP.JS DHE BACKEND FILLO DETAILS KUR KLIKON CRYPTO DALIN DETAILS,
+!!!!!!!!!!!
+
+isLoaded USESTATE USEEFFECT
+
+LogIn/Register.jsx
+Form with picture not required + Validations + buttons
++/db
+welcome user / login detected
+
+
+*CryptoList.jsx 
+Star button crypto Add to Favourites.jsx
+Buy or Transfer Buttons in map --->>> 1/2 DONE
+
+*Details.jsx 
+Graph
+Details
+History
+
+*Portfolio.jsx
+showing my balance and options -> Transfer, Buy
+
+*Buy.jsx
+Form of converting + buttons
+
+*Transfer.jsx
+Available and Wallet ID + buttons
+
+*Edit Profile.jsx
+Form with picture + Validations + buttons
+
+*Footer.jsx
+Social Media Icons
+
+*ERROR 404
+
+
